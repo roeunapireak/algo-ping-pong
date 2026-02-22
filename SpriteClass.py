@@ -25,4 +25,16 @@ class GameSprite(sprite.Sprite):
 
 
 class Player(GameSprite):
-    pass
+    def update_racket1(self):
+        keys = key.get_pressed()
+        if keys[K_w]: 
+            self.rect.y -= self.speed
+        if keys[K_s]:
+            self.rect.y += self.speed
+
+    def update_racket2(self):
+        keys = key.get_pressed()
+        if keys[K_UP]: 
+            self.rect.y -= self.speed
+        if keys[K_DOWN]:
+            self.rect.y += self.speed
